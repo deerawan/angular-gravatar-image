@@ -1,0 +1,17 @@
+{
+  "name": "angular-gravatar-image",
+  "version": "1.0.0",
+  "description": "Angular directive for Gravatar image",
+  "main": "angular-gravatar-image.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+    "angularjs",
+    "angular",
+    "directive",
+    "gravatar"
+  ],
+  "author": "Budi Irawan <deerawan@gmail.com> (http://budiirawan.com)",
+  "license": "MIT"
+}
