@@ -1,7 +1,7 @@
 {
   "name": "angular-gravatar-image",
   "version": "1.0.0",
-  "description": "Angular directive for Gravatar image",
+  "description": "An AngularJS directive for Gravatar image",
   "main": "angular-gravatar-image.js",
   "scripts": {
     "test": "grunt test"
@@ -16,6 +16,15 @@
   "license": "MIT",
   "devDependencies": {
     "eslint": "^1.5.0",
-    "eslint-plugin-angular": "^0.12.0"
+    "eslint-config-angular": "^0.4.0",
+    "eslint-plugin-angular": "^0.12.0",
+    "gulp-eslint": "^1.0.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0"
   }
 }
