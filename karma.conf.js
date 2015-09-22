@@ -8,8 +8,16 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'src/angular-gravatar-image.js',
+      'src/template/*.html',
       'test/spec/**/*.js'
     ],
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'src/',
+      moduleName: 'template'
+    },
+    preprocessors: {
+      'src/template/*.html': ['ng-html2js']
+    },
     autoWatch: false,
     singleRun: true,
     browsers: ['Chrome'],

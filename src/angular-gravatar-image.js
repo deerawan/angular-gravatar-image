@@ -8,7 +8,7 @@
   function gravatarImage() {
     var directive = {
       restrict: 'EA',
-      template: '<img />'
+      templateUrl: 'template/angular-gravatar-image.html'
     };
 
     return directive;
