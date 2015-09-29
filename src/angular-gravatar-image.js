@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('bgn.GravatarImage', [])
+    .module('bgn.GravatarImage', ['bgn.md5'])
     .directive('gravatarImage', gravatarImage);
 
   function gravatarImage() {
@@ -12,7 +12,7 @@
         email: '@'
       },
       template: '<div><img src="{{url}}" /></div>',
-      controller: gravatarImageController
+      controller: GravatarImageController
       // link: function(scope) {
       //   scope.url = 'http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50';
       // }
@@ -21,9 +21,11 @@
     return directive;
   }
 
-  gravatarImageController.$inject = ['$scope'];
-  function gravatarImageController($scope) {
-    $scope.url = 'http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50';
+  GravatarImageController.$inject = ['$scope', 'md5'];
+
+  function GravatarImageController($scope, md5) {
+    // $scope.url = 'http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50';
+    $scope.url = md5.encrypt('deerawan@gmail.com');
   }
 
 }());
