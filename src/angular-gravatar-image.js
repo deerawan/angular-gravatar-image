@@ -24,8 +24,8 @@
   GravatarImageController.$inject = ['$scope', 'md5'];
 
   function GravatarImageController($scope, md5) {
-    // $scope.url = 'http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50';
-    $scope.url = md5.encrypt('deerawan@gmail.com');
+    var md5Hash = md5.encrypt('deerawan@gmail.com');
+    $scope.url = 'http://www.gravatar.com/avatar/' + md5Hash;
   }
 
 }());

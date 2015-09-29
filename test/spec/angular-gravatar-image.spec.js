@@ -26,6 +26,6 @@ describe('angular-gravatar-image', function() {
     element = $compile(element)($scope);
     $scope.$apply();
 
-    expect(element.find('div').html()).toEqual('http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50');
+    expect(element.find('div').html()).toEqual('http://www.gravatar.com/avatar/71a6523c5915c0ee79a79a137c1b2be0');
   });
 });
