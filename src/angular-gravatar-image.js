@@ -9,13 +9,13 @@
     var directive = {
       restrict: 'EA',
       scope: {
-        email: '@'
+        email: '='
       },
       template: '<img src="{{url}}" />',
       controller: GravatarImageController
-      // link: function(scope) {
-      //   scope.url = 'http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50';
-      // }
+      link: function(scope) {
+        scope.url = 'http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50';
+      }
     };
 
     return directive;
