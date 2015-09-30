@@ -11,7 +11,7 @@
       scope: {
         email: '@'
       },
-      template: '<div><img src="{{url}}" /></div>',
+      template: '<img src="{{url}}" />',
       controller: GravatarImageController
       // link: function(scope) {
       //   scope.url = 'http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50';
@@ -24,7 +24,7 @@
   GravatarImageController.$inject = ['$scope', 'md5'];
 
   function GravatarImageController($scope, md5) {
-    var md5Hash = md5.encrypt('deerawan@gmail.com');
+    var md5Hash = md5.encrypt($scope.email);
     $scope.url = 'http://www.gravatar.com/avatar/' + md5Hash;
   }
 
