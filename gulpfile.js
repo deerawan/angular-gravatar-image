@@ -7,12 +7,6 @@ var watch = require('gulp-watch');
 var batch = require('gulp-batch');
 var Server = require('karma').Server;
 
-gulp.task('watch', function() {
-  watch('src/*.js', batch(function(events, done) {
-      gulp.start('concat', done);
-    }));
-});
-
 gulp.task('lint', function () {
   return gulp.src(['src/**/*.js'])
       .pipe(eslint())
@@ -35,6 +29,12 @@ gulp.task('test', function (done) {
   }, done).start();
 });
 
-gulp.task('build', ['test', 'concat']);
+gulp.task('watch', function() {
+  watch('src/*.js', batch(function(events, done) {
+      gulp.start('build', done);
+    }));
+});
+
+gulp.task('build', ['lint', 'test', 'concat']);
 
 gulp.task('default', ['build']);
