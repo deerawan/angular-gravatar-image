@@ -28,4 +28,12 @@ describe('angular-gravatar-image', function() {
 
     expect(element.find('img').attr('src')).toEqual('http://www.gravatar.com/avatar/71a6523c5915c0ee79a79a137c1b2be0');
   });
+
+  it('should initialize with size attribute', function() {
+    element = angular.element('<gravatar-image email="deerawan@gmail.com" size="200"></gravatar-image>');
+    element = $compile(element)($scope);
+    $scope.$apply();
+
+    expect(element.find('img').attr('src')).toEqual('http://www.gravatar.com/avatar/71a6523c5915c0ee79a79a137c1b2be0?size=200');
+  });
 });

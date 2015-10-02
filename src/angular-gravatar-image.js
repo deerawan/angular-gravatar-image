@@ -9,16 +9,40 @@
     var directive = {
       restrict: 'EA',
       scope: {
-        email: '='
+        email: '@'
       },
-      template: '<img src="{{url}}" />',
-      controller: GravatarImageController
-      link: function(scope) {
-        scope.url = 'http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50';
-      }
+      template: '<img ng-src="{{url}}" />',
+      controller: GravatarImageController,
+      link: link
     };
 
     return directive;
+
+    function link(scope, element, attrs) {
+      var parameters = '';
+
+      if (attrs.size) {
+        parameters += 'size=' + attrs.size;
+      }
+
+      if (attrs.default) {
+        parameters += '&default=' + attrs.default;
+      }
+
+      if (attrs.forcedefault) {
+        parameters += '&forcedefault=' + attrs.forcedefault;
+      }
+
+      if (attrs.rating) {
+        parameters += '&rating=' + attrs.rating;
+      }
+
+      if (parameters != '') {
+        scope.url = scope.url + '?' + parameters;
+      }
+
+
+    }
   }
 
   GravatarImageController.$inject = ['$scope', 'md5'];
