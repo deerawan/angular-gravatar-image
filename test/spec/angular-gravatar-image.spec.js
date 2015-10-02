@@ -36,4 +36,12 @@ describe('angular-gravatar-image', function() {
 
     expect(element.find('img').attr('src')).toEqual('https://secure.gravatar.com/avatar/71a6523c5915c0ee79a79a137c1b2be0');
   });
+
+  it('should display all parameters correctly', function() {
+    element = angular.element('<gravatar-image email="deerawan@gmail.com" size="200" default="retro" forcedefault="y" rating="pg"></gravatar-image>');
+    element = $compile(element)($scope);
+    $scope.$apply();
+
+    expect(element.find('img').attr('src')).toEqual('https://secure.gravatar.com/avatar/71a6523c5915c0ee79a79a137c1b2be0?size=200&default=retro&forcedefault=y&rating=pg');
+  });
 });
