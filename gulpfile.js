@@ -44,6 +44,6 @@ gulp.task('uglify', function() {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('build', ['lint', 'test', 'concat']);
+gulp.task('build', ['lint', 'test', 'concat', 'uglify']);
 
 gulp.task('default', ['build']);
