@@ -3,8 +3,7 @@
 
   angular.module('gravatarImageExample', ['bgn.GravatarImage'])
     .controller('GravatarImageController', ['$scope', function($scope) {
-      // $scope.email = 'deerawan@gmail.com';
-      $scope.email = 'budi@ebizu.com';
+      $scope.email = 'deerawan@gmail.com';
     }]);
 
 })(window.angular);
