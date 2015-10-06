@@ -6,14 +6,12 @@
     "Budi Irawan <deerawan@gmail.com>"
   ],
   "description": "An AngularJS directive for Gravatar image",
-  "main": "angular-gravatar-image.js",
+  "main": "./angular-gravatar-image.js",
   "keywords": [
     "angular",
     "gravatar",
-    "gravatar",
     "image",
-    "angular",
-    "gravatar"
+    "directive"
   ],
   "license": "MIT",
   "ignore": [
@@ -22,10 +20,9 @@
     "bower_components",
     "src",
     "test",
-    "tests",
     "*.min.js",
     "*.conf.js",
-    "Gruntfile.js",
+    "gulpfile.js",
     "package.json"
   ],
   "dependencies": {

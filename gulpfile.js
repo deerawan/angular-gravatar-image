@@ -5,6 +5,7 @@ var eslint = require('gulp-eslint');
 var concat = require('gulp-concat');
 var watch = require('gulp-watch');
 var batch = require('gulp-batch');
+var uglify = require('gulp-uglifyjs');
 var Server = require('karma').Server;
 
 gulp.task('lint', function () {
@@ -33,6 +34,14 @@ gulp.task('watch', function() {
   watch('src/*.js', batch(function(events, done) {
       gulp.start('build', done);
     }));
+});
+
+gulp.task('uglify', function() {
+  return gulp.src('angular-gravatar-image.js')
+    .pipe(uglify('angular-gravatar-image.min.js', {
+      outSourceMap: true
+    }))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('build', ['lint', 'test', 'concat']);
