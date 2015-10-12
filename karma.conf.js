@@ -3,7 +3,7 @@ module.exports = function(config) {
 
   config.set({
     basePath: '',
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine'],    
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
@@ -13,7 +13,7 @@ module.exports = function(config) {
     ],
     autoWatch: false,
     singleRun: true,
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
     exclude: []
   });
 };
