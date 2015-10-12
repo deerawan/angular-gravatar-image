@@ -2,6 +2,8 @@ Angular Gravatar Image
 ============================
 An AngularJS directive to show a Gravatar image
 
+[![Build Status](https://travis-ci.org/deerawan/angular-gravatar-image.svg?branch=master)](https://travis-ci.org/deerawan/angular-gravatar-image)
+
 ## Install via NPM
 ```
 npm install angular-gravatar-image --save
